@@ -13,10 +13,5 @@ export const Display = ({ value, historyText, resultText }) => {
                 {resultText}
             </Text>
         </View>
-        // <View style={styles.dispaly}>
-        //     <Text style={styles.displayValue} numberOfLines={1}>
-        //         {value}
-        //     </Text>
-        // </View>
     );
 }

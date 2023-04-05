@@ -33,7 +33,8 @@ export default function App() {
 
   function handleInput(buttonPressed) {
 
-    if (buttonPressed === '+' | buttonPressed === "-" | buttonPressed === "*" | buttonPressed === "/") {
+    console.log(buttonPressed);
+    if (buttonPressed === '+' || buttonPressed === "*" || buttonPressed === "/") {
       setCurrentNumber(currentNumber + " " + buttonPressed + " ");
       return;
     }
@@ -51,6 +52,7 @@ export default function App() {
         calculator();
         return;
       case '+/-':
+        setCurrentNumber(currentNumber.charAt(0) === '-' ? currentNumber.slice(1) : '-' + currentNumber);
         return;
     }
 
@@ -68,7 +70,7 @@ export default function App() {
 
         <Button label={'AC'} onPress={() => handleInput('AC')} operation />
         <Button label={'DEL'} onPress={() => handleInput('DEL')} operationDel />
-        <Button label={'%'} onPress={() => handleInput('%')} operation />
+        <Button label={'+/-'} onPress={() => handleInput('+/-')} operation />
         <Button label={'/'} onPress={() => handleInput('/')} operation />
         <Button label={'7'} onPress={() => handleInput(7)} />
         <Button label={'8'} onPress={() => handleInput(8)} />

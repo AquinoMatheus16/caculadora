@@ -12,8 +12,6 @@ export const styles = StyleSheet.create({
 
     results: {
         backgroundColor: "#f5f5f5",
-        // width: '100%',
-        // minHeight: 280,
         flex: 1,
         alignItems: 'flex-end',
         justifyContent: 'flex-end'
